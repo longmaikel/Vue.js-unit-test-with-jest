@@ -27,7 +27,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 sh 'docker build -f ./.docker/Dockerfile.run -t project_run .'
-                sh 'docker run -it -d -p 1137:80  project_run'
+                sh 'docker run -it -d project_run'
             }
         }
 
