@@ -1,2 +1,3 @@
-FROM project_build
-RUN npm run test:unit
+FROM project_dep
+CMD [".exit"]
+CMD ["npm", "run", "test:unit"]
