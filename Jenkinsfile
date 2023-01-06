@@ -30,6 +30,11 @@ pipeline {
                 sh 'docker run -it -d project_run'
             }
         }
+        stage('Publish') {
+            steps {
+                sh 'tar -czvf dist.tar.gz dist'
+            }
+        }
 
     }
 }
